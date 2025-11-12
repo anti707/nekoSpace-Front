@@ -1,42 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NavesService from '../../services/NavesService.jsx';
+import NavesService from '../../services/ProductoService.jsx';
 
-const NavesList = () => {
+const ProductList = () => {
     
-    const [naves, setNaves] = useState([]);
+    const [Producto, setProducto] = useState([]);
     
     useEffect(() => {
-        fetchNaves();
+        fetchProducto();
     }, []);
 
-    const fetchNaves = () => {
-        NavesService.getAllNaves().then(response => {
-            setNaves(response.data);
+    const fetchProducto = () => {
+        ProductoService.getAllProducto().then(response => {
+            setProducto(response.data);
         }).catch(error => {
-            console.log('Error fetching books:', error);
+            console.log('Error al encontrar producto', error);
         });
     };
     return (
         <div>
-            <h2>Naves List</h2>
+            <h2>Productos lista</h2>
             <div className="bg-blue-500 text-white p-10 text-center font-bold text-2xl">
-                Naves de Star Wars
+                Productos
             </div>
             <table>
                 <thead>
                     <tr>
-                        <th>Nombre nave</th>
+                        <th>Nombre Producto</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {naves.map(nave => (
-                        <tr key={nave.id}>
-                            <td>{nave.nombre}</td>    
+                    {Producto.map(Producto => (
+                        <tr key={Producto.id}>
+                            <td>{Producto.nombre}</td>    
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>);
     };
-export default NavesList;
+export default ProductList;

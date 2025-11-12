@@ -1,8 +1,8 @@
 import React from "react";
-import DynamicTexts from "../molecules/DynamicTexts";
+import DynamicTexts from "../molecules/Texts";
 import Image from "../atoms/Image";
 
-function CardsDisplay({ content = [], className = "p-4", isCardList = false }) {
+function Cards({ content = [], className = "p-4", isCardList = false }) {
   return (
     <div className={className}>
       <div
@@ -54,4 +54,4 @@ function CardsDisplay({ content = [], className = "p-4", isCardList = false }) {
   );
 }
 
-export default CardsDisplay;
+export default Cards;

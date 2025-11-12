@@ -1,14 +1,14 @@
 import React from "react";
-import DynamicTexts from "../molecules/DynamicTexts";
+import DynamicTexts from "../molecules/Texts";
 import Image from "../atoms/Image";
-import CardsDisplay from "../organims/CardsDisplay";
+import CardsDisplay from "../organims/Cards";
 
 function Section({ content = [], className = "p-4" }) {
   return (
     <div className={className}>
       {content.map((item, index) => {
         if (item.type === "text") {
-          return <DynamicTexts key={index} Texts={item.text} />;
+          return <Texts key={index} Texts={item.text} />;
         }
 
         if (item.type === "image") {

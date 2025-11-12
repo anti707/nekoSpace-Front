@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import {publicLinks} from './data/navbarPublicLinks';
-import {adminLinks} from './data/navbarAdminLinks';
+import {publicLinks} from './data/PublicLinks';
+import {adminLinks} from './data/AdminLinks';
 
 import Navbar from './components/organisms/Navbar';
 

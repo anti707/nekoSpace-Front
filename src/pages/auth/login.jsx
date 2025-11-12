@@ -27,16 +27,15 @@ const Login = () => {
 
         try {
             const response = await UserService.login(form);
-            const usuario = response.data; // YA ES EL USUARIO COMPLETO
+            const usuario = response.data; 
 
-            // GUARDA SOLO user (SIN token)
+            
             localStorage.setItem('user', JSON.stringify({
                 id: usuario.id,
                 nombre: usuario.nombre,
                 rol: usuario.rol
             }));
 
-            // USA EL CONTEXTO
             login({
                 id: usuario.id,
                 nombre: usuario.nombre,

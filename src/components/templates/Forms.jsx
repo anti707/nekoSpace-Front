@@ -1,14 +1,14 @@
 import React from "react";
-import DynamicTexts from "../molecules/DynamicTexts";
+import DynamicTexts from "../molecules/Texts";
 import Button from "../atoms/Button";
-import DynamicInputs from "../molecules/DynamicInput";
+import DynamicInputs from "../molecules/Input";
 
 function Forms({ content = [], className = "p-4" }) {
     return (
         <div className={className}>
             {content.map((item, index) => {
                 if (item.type === "text") {
-                    return <DynamicTexts key={index} Texts={item.text} />;
+                    return <Texts key={index} Texts={item.text} />;
                 }
 
                 if(item.type === "button") {
@@ -16,7 +16,7 @@ function Forms({ content = [], className = "p-4" }) {
                 }
 
                 if(item.type === "inputs") {
-                    return <DynamicInputs key={index} Inputs={item.inputs} className={item.className} />;
+                    return <Inputs key={index} Inputs={item.inputs} className={item.className} />;
                 }
 
                 return null;

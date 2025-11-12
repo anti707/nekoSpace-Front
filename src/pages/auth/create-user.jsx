@@ -34,13 +34,9 @@ const CreateUser = () => {
 
             generarMensaje('usuario creado!', 'success');
 
-            // Redirigir al dashboard
-            /*setTimeout(() => {
-                navigate('/dashboard');
-            }, 800);*/
+            
 
         } catch (error) {
-            // ERRORES
             const msg = error.response?.data?.message || 'Error al crear usuario';
             generarMensaje(msg, 'error');
         } finally {
