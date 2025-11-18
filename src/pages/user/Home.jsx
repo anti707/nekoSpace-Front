@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NavesService from '../../services/ProductoService.jsx';
+import ProductoService from '../../services/ProductoService.jsx';
 
 const ProductList = () => {
     
