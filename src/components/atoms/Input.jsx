@@ -1,4 +1,3 @@
-// src/components/atoms/Input.jsx
 import React from "react";
 
 const Input = ({type = "text", placeholder = "", name = "", value = "", onChange = () => {}, required = false, autoComplete = "", className = "", disabled = false,}) => {

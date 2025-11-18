@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = 'https://naves-back.onrender.com/api/naves';
 
-class ProductoService {
+class DireccionesServices {
 
     getAllProductos() {
         return axios.get(BASE_URL);
@@ -25,4 +25,4 @@ class ProductoService {
     }
 }
 
-export default new ProductoService();
+export default new DireccionesServices();

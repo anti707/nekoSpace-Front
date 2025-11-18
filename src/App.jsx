@@ -19,16 +19,16 @@ function Layout() {
   return (
     <>
       {isAdminRoute ? (
-        <Navbar links={adminLinks} title="Admin Naves Front"/>
+        <Navbar links={adminLinks} title="Admin nekoSpace front"/>
       ) : (
-        shouldShowNavbarPublic && <Navbar links={publicLinks}  title="Naves Front"/>
+        shouldShowNavbarPublic && <Navbar links={publicLinks}  title="nekoSpace front"/>
       )}
 
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/create-user" element={<CreateUser />} />
+          <Route path="/login" element={<LoginData />} />
+          <Route path="/create-user" element={<Create-User />} />
           <Route path="/admin/dashboard" element={<HomeAdmin />} />
           <Route path="*" element={<div>404 - Página no encontrada</div>} />
         </Routes>
